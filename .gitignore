@@ -1,0 +1,6 @@
+# Compiled Papyrus (built by the Creation Kit)
+*.pex
+# Packaged archives / release zips
+*.ba2
+*.zip
+*.7z

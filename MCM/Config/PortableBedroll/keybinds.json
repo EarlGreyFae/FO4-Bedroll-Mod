@@ -1,0 +1,16 @@
+{
+  "modName": "PortableBedroll",
+  "keybinds": [
+    {
+      "id": "ToggleBedroll",
+      "desc": "Lay down / pick up bedroll",
+      "action": {
+        "type": "CallFunction",
+        "form": "PortableBedroll.esp|800",
+        "scriptName": "PortableBedroll:QuestScript",
+        "function": "OnHotkey",
+        "params": []
+      }
+    }
+  ]
+}

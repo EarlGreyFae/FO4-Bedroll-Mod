@@ -1,0 +1,25 @@
+{
+  "modName": "PortableBedroll",
+  "displayName": "Portable Bedroll",
+  "minMcmVersion": 2,
+  "content": [
+    {
+      "text": "Portable Bedroll",
+      "type": "section"
+    },
+    {
+      "text": "Use the Portable Bedroll from the Aid tab of your Pip-Boy (or a Favorites slot) to lay it down. Activate it to sleep. Sneak and activate it to pack it back up.",
+      "type": "text"
+    },
+    {
+      "text": "Hotkeys",
+      "type": "section"
+    },
+    {
+      "id": "ToggleBedroll",
+      "text": "Lay down / pick up bedroll",
+      "type": "hotkey",
+      "help": "Lays your bedroll down in front of you. Press again while standing near it to pick it back up."
+    }
+  ]
+}
