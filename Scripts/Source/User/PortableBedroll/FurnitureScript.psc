@@ -2,7 +2,7 @@ Scriptname PortableBedroll:FurnitureScript extends ObjectReference
 {Attached to the placed bedroll furniture. Activate normally to sleep;
 activate while sneaking to pick it back up.}
 
-PortableBedroll:QuestScript Property BedrollQuest Auto Const Mandatory
+PortableBedroll:QuestScript Property PortableBedrollQuest Auto Const Mandatory
 
 Event OnLoad()
 	; Intercept activation so we can choose between sleeping and picking up.
@@ -16,7 +16,7 @@ Event OnActivate(ObjectReference akActionRef)
 	EndIf
 
 	If player.IsSneaking()
-		BedrollQuest.PickUpBedroll(Self)
+		PortableBedrollQuest.PickUpBedroll(Self)
 	Else
 		; Run the normal furniture activation, which opens the sleep menu.
 		Activate(player, True)
@@ -27,6 +27,6 @@ Event OnUnload()
 	; The player left the area (fast travel, door, etc.) without packing up.
 	; Return the bedroll automatically so it can never be lost.
 	If !IsDeleted()
-		BedrollQuest.PickUpBedroll(Self, True)
+		PortableBedrollQuest.PickUpBedroll(Self, True)
 	EndIf
 EndEvent

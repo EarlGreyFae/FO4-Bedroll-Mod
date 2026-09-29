@@ -41,11 +41,12 @@ MCM/Config/PortableBedroll/
   config.json          MCM page (keyboard hotkey, controller button, options)
   keybinds.json        wires the keyboard hotkey to QuestScript.OnHotkey
   settings.ini         default settings
-docs/CreationKitSetup.md  how to build PortableBedroll.esp in the Creation Kit
+Scripts/Source/CompileHeaders/MCM.psc  compile-only MCM header (if yours lacks one)
+INSTALL.md           full build + install + test guide
 ```
 
-## Building
+## Building and installing
 
 The plugin (`.esp`) and compiled scripts (`.pex`) are produced with the
-Fallout 4 Creation Kit. Follow [docs/CreationKitSetup.md](docs/CreationKitSetup.md)
-— it's five records and takes about ten minutes.
+Fallout 4 Creation Kit. [INSTALL.md](INSTALL.md) covers everything:
+requirements, building, enabling the plugin, and a test checklist.
