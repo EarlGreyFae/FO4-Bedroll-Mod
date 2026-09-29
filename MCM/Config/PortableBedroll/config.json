@@ -8,11 +8,11 @@
       "type": "section"
     },
     {
-      "text": "Use the Portable Bedroll from the Aid tab of your Pip-Boy (or a Favorites slot) to lay it down. Activate it to sleep. Sneak and activate it to pack it back up.",
+      "text": "Use the Portable Bedroll from the Aid tab of your Pip-Boy (or a hotkey) to lay it down. Activate it to sleep. Sneak and activate it to pack it back up.",
       "type": "text"
     },
     {
-      "text": "Hotkeys",
+      "text": "Keyboard",
       "type": "section"
     },
     {
@@ -20,6 +20,63 @@
       "text": "Lay down / pick up bedroll",
       "type": "hotkey",
       "help": "Lays your bedroll down in front of you. Press again while standing near it to pick it back up."
+    },
+    {
+      "text": "Controller",
+      "type": "section"
+    },
+    {
+      "id": "iControllerButton:Main",
+      "text": "Button (hold)",
+      "type": "dropdown",
+      "help": "Hold this controller button to lay your bedroll down, or to pick it up when you're standing near it. A normal tap still does the button's usual action.",
+      "valueOptions": {
+        "options": [
+          "Disabled",
+          "D-Pad Up",
+          "D-Pad Down",
+          "D-Pad Left",
+          "D-Pad Right",
+          "Start / Menu",
+          "Back / View",
+          "Left Stick Click",
+          "Right Stick Click",
+          "Left Bumper",
+          "Right Bumper",
+          "A / Cross",
+          "B / Circle",
+          "X / Square",
+          "Y / Triangle",
+          "Left Trigger",
+          "Right Trigger"
+        ],
+        "sourceType": "ModSettingInt"
+      }
+    },
+    {
+      "id": "fHoldTime:Main",
+      "text": "Hold time (seconds)",
+      "type": "slider",
+      "help": "How long the controller button must be held.",
+      "valueOptions": {
+        "min": 0.25,
+        "max": 2.0,
+        "step": 0.05,
+        "sourceType": "ModSettingFloat"
+      }
+    },
+    {
+      "text": "Options",
+      "type": "section"
+    },
+    {
+      "id": "bAutoPackUp:Main",
+      "text": "Pack up automatically after sleeping",
+      "type": "switcher",
+      "help": "When you wake up, your bedroll is packed back into your inventory for you.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
     }
   ]
 }

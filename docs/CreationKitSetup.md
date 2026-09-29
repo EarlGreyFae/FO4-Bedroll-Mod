@@ -14,9 +14,13 @@ which are created once in the Fallout 4 Creation Kit (CK) as described below.
 1. Copy `Scripts/Source/User/PortableBedroll/` into
    `Fallout 4/Data/Scripts/Source/User/PortableBedroll/`.
 2. Launch the CK, **File > Data...**, tick `Fallout4.esm` only, click **OK**.
-3. Compile the scripts: **Gameplay > Papyrus Script Manager**, select the three
-   `PortableBedroll:*` scripts, right-click **Compile**. (They only use vanilla
-   functions — F4SE is not required to compile or run them.)
+3. Install the script *sources* the mod builds against:
+   - **F4SE**: copy its `Data/Scripts/Source/User/*.psc` (F4SE's versions of
+     `ScriptObject.psc`, `F4SE.psc`, etc.) into the same folder, overwriting.
+   - **MCM**: copy `MCM.psc` from the MCM download into
+     `Data/Scripts/Source/User/`.
+4. Compile the scripts: **Gameplay > Papyrus Script Manager**, select the three
+   `PortableBedroll:*` scripts, right-click **Compile**.
 
 ## 1. Quest – `PortableBedrollQuest`
 
@@ -107,8 +111,9 @@ Data/
   Scripts/PortableBedroll/EffectScript.pex
   Scripts/PortableBedroll/FurnitureScript.pex
   Scripts/Source/User/PortableBedroll/*.psc      (optional, for other modders)
-  MCM/Config/PortableBedroll/config.json         (optional hotkey)
-  MCM/Config/PortableBedroll/keybinds.json       (optional hotkey)
+  MCM/Config/PortableBedroll/config.json
+  MCM/Config/PortableBedroll/keybinds.json
+  MCM/Config/PortableBedroll/settings.ini
 ```
 
 ## In-game test checklist
@@ -120,4 +125,7 @@ Data/
 - [ ] Favorite the item, use the number key / d-pad → bedroll is laid down.
 - [ ] Try it in combat and in Power Armor → refused, item is kept.
 - [ ] Lay it down, fast travel away → item is returned to your inventory.
-- [ ] With MCM: bind the hotkey, press to lay down, press near it to pick up.
+- [ ] MCM: bind the keyboard hotkey, press to lay down, press near it to pick up.
+- [ ] MCM: pick a controller button, hold it to lay down / pick up; a quick
+      tap still does the button's normal action.
+- [ ] MCM: enable "Pack up automatically after sleeping", sleep → item returns.
